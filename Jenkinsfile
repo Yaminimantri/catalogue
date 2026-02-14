@@ -33,6 +33,12 @@ pipeline {
                 }
             }
         }
+        stage('Debug Files') {
+            steps {
+              sh 'pwd'
+              sh 'ls -la'
+            }
+        }
         stage('Build Image') {
             steps {
                 script {
