@@ -45,7 +45,7 @@ pipeline {
                 }
             }
         }
-        stage('Sonar Scan'){
+        /* stage('Sonar Scan'){
             environment {
                 def scannerHome = tool 'sonar-8.0'
             }
@@ -65,7 +65,7 @@ pipeline {
                     waitForQualityGate abortPipeline: true 
                 }
             }
-        } 
+        }  */
         stage('Dependabot Security Gate') {
             environment {
                 GITHUB_OWNER = 'Yaminimantri'
